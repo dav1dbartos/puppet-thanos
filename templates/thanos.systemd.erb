@@ -1,0 +1,22 @@
+# THIS FILE IS MANAGED BY PUPPET
+[Unit]
+Description= <%= @daemon_name %> process
+Wants=basic.target
+After=basic.target network.target
+
+[Service]
+LimitNOFILE=999999
+LimitNOFILESoft=999999
+User=<%= @daemon_user %>
+Group=<%= @daemon_user %>
+<%- require 'shellwords' -%>
+ExecStart=<%= @bin_dir %>/<%= @bin_name %> <%= @thanos_component %> <% for option in Shellwords.split(@options) %> \
+<%= option -%>
+<% end %>
+
+ExecReload=/bin/kill -HUP $MAINPID
+KillMode=process
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

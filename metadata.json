@@ -1,0 +1,17 @@
+{
+  "name": "puppet-thanos",
+  "version": "1.0.0",
+  "author": "David Bartos",
+  "summary": "Puppet module for creating Thanos services",
+  "license": "Apache-2.0",
+  "source": "https://github.com/dav1dbartos/puppet-thanos",
+  "project_page": "https://github.com/dav1dbartos/puppet-thanos",
+  "issues_url": "https://github.com/dav1dbartos/puppet-thanos/issues",
+  "dependencies": [
+    {
+      "name": "puppetlabs-stdlib",
+      "version_requirement": ">= 1.0.0"
+    }
+  ]
+}
+

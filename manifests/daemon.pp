@@ -33,6 +33,7 @@ define thanos::daemon(
   service { $daemon_name :
     ensure => 'running',
     enable => true,
+    provider => $init_style
   }
 
 }

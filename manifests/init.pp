@@ -49,7 +49,7 @@ class thanos(
   String $s3secret_key = '',
   String $bin_dir = '/bin',
   String $bin_name = 'thanos',
-  String $package_name = 'thanos-pkg',
+  String $package_name = 'thanos-cloudevelops',
   String $package_ensure = 'installed',
   String $tsdb_path = '/var/lib/prometheus',
   String $http_address = '0.0.0.0:19191',
